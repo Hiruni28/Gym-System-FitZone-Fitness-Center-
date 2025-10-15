@@ -1,0 +1,194 @@
+:root {
+  --primary-color: #db3f34; 
+  --primary-color-dark: #db3f34; 
+  --secondary-color: #2c3e50; 
+  --background-light: #ecf0f1; 
+  --background-dark: #34495e; 
+  --text-light: #f9f9f9; 
+  --text-dark: #2c3e50; 
+  --button-hover-color: #1abc9c; 
+  --border-color: #95a5a6; 
+}
+
+
+
+body {
+  font-family: sans-serif;
+  background-image: url('../images/art/css.jpg');
+  background-repeat: no-repeat;
+  background-size: cover; 
+  background-position: center; 
+  background-attachment: fixed; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.container {
+  background-color: var(--background-light); 
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 0;
+  width: 700px;
+  display: flex;
+  overflow: hidden; /* Hide overflow */
+}
+
+.left {
+  width: 50%;
+  padding: 40px 30px;
+  background-color: var(--background-dark); /* Darker background for left side */
+  color: var(--text-light); /* Light text for readability */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.right {
+  width: 50%;
+  background-image: url('../images/art/logo.png');
+  background-size: cover;
+  background-position: center;
+  color: var(--text-light);
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* Pushes the button to the bottom */
+  text-align: center;
+}
+
+.right button {
+  margin-top: auto; /* Ensure the button stays at the bottom */
+  padding: 12px 20px;
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.right button a {
+  color: var(--text-light);
+  text-decoration: none;
+}
+
+.right button:hover {
+  background-color: var(--primary-color-dark);
+}
+
+.right button a:hover {
+  text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+h1 {
+  margin-top: 0;
+  text-align: center;
+  font-size: 2.5em; /* Larger font size for heading */
+  color: var(--primary-color);
+}
+
+.social-login {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.social-login button {
+  background-color: var(--background-light); /* Light background for buttons */
+  border: none;
+  border-radius: 50%;
+  padding: 12px;
+  font-size: 1.2em;
+  color: var(--text-dark); /* Dark text for button icons */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.social-login button:hover {
+  background-color: var(--primary-color-dark); /* Darker background on hover */
+  color: var(--text-light); /* Light color on hover */
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  box-sizing: border-box;
+  border: 2px solid var(--border-color); /* Border color for inputs */
+  border-radius: 5px;
+  background-color: var(--background-light); /* Light input background */
+  color: var(--text-dark); /* Dark text for inputs */
+  transition: border 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  border-color: var(--primary-color-dark); /* Darker border on focus */
+}
+
+.btn-primary {
+  background-color: var(--primary-color); /* Primary color for buttons */
+  color: var(--text-light); /* Light text for contrast */
+  padding: 12px 20px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-color-dark); /* Darker color for hover effect */
+}
+
+a {
+  color: var(--primary-color); /* Use primary color for links */
+  text-decoration: none;
+  
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+
+
+
+/* Popup Styles */
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  border-radius: 5px;
+  color: #fff;
+  background-color: #333;
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.popup.show {
+  display: block;
+  opacity: 1;
+}
+
+.popup.success {
+  background-color: green;
+}
+
+.popup.error {
+  background-color: red;
+}
